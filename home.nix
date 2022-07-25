@@ -83,9 +83,7 @@
       prezto = {
         enable = true;
         caseSensitive = false;
-        prompt = {
-          theme = "pure";
-        };
+        prompt = { theme = "pure"; };
       };
     };
 

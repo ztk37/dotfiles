@@ -1,9 +1,5 @@
 let
-  pkgs = import <nixpkgs> {};
+  pkgs = import <nixpkgs> { };
 
   inherit (pkgs) mkShell nixfmt;
-in mkShell {
-    buildInputs = [
-        nixfmt
-    ];
-}
+in mkShell { buildInputs = [ nixfmt ]; }
