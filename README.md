@@ -20,7 +20,7 @@ home-manager --version
 
 ## Usage
 
-Verify config
+Verify and apply config
 
 ```console
 home-manager switch
