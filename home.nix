@@ -1,3 +1,5 @@
+# Docs: https://rycee.gitlab.io/home-manager/options.html
+
 { config, pkgs, ... }:
 
 {
@@ -25,6 +27,7 @@
       # pkgs.vscode
 
       # Misc
+      pkgs.coreutils
       pkgs.ranger
       pkgs.jq
     ];
@@ -42,12 +45,59 @@
 
       extraConfig = { init = { defaultBranch = "main"; }; };
 
+      ignores = [ ".DS_Store" ];
     };
 
     zsh = {
       enable = true;
 
-      shellAliases = { };
+      enableAutosuggestions = true;
+      # TODO reenable when issue is fixed
+      # https://github.com/NixOS/nix/issues/5445
+      enableCompletion = false;
+      autocd = true;
+      dotDir = ".config/zsh";
+
+      sessionVariables = { EDITOR = "vim"; };
+
+      history = {
+        expireDuplicatesFirst = true;
+        ignoreDups = true;
+        ignoreSpace = true; # ignore commands starting with a space
+        save = 20000;
+        size = 20000;
+        share = true;
+      };
+
+      shellAliases = {
+        size = "du -sh";
+        free = "free -h";
+
+        mkdir = "mkdir -p";
+        ls = "ls --color=auto --group-directories-first";
+        ll = "ls -l";
+        la = "ls -a";
+        l = "ls -la";
+      };
+
+      prezto = {
+        enable = true;
+        caseSensitive = false;
+        prompt = {
+          theme = "pure";
+        };
+      };
     };
+
+    vim = {
+      enable = true;
+
+      extraConfig = ''
+        set number
+        set noswapfile
+      '';
+    };
+
+    jq.enable = true;
   };
 }
