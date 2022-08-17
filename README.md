@@ -9,11 +9,16 @@
     <a href="https://github.com/nix-community/home-manager">
       <img src="https://img.shields.io/badge/managed%20by-home%20manager-666DF2?style=for-the-badge&logo=nixos&labelColor=24273a">
     </a>
+    <!-- <a href="https://github.com/nix-community/home-manager">
+      <img src="https://img.shields.io/badge/os-nixos-666DF2?style=for-the-badge&logo=nixos&labelColor=24273a">
+    </a> -->
     <a href="https://github.com/nix-community/home-manager">
       <img src="https://img.shields.io/badge/os-macos-666DF2?style=for-the-badge&logo=apple&labelColor=24273a">
     </a>
   </div>
 </h1>
+
+> My configuration files for MacOS (and maybe later also NixOS). You can look around and copy! But keep the license attribution when you use the logo. :point_up:
 
 <!-- <p align="center">
   My dotfiles managed with <a href="https://nixos.org/learn.html">nix</a> and <a href="https://github.com/nix-community/home-manager">home-manager</a>.
