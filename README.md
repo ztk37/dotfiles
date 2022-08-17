@@ -6,7 +6,7 @@
   <p><img src="./assets/underline.png" width="380px" /></p>
   <div align="center">
     <a href="https://nixos.org/learn.html">
-      <img src="https://img.shields.io/badge/writen%20in-nix-666DF2?style=for-the-badge&logo=nixos&labelColor=24273a">
+      <img src="https://img.shields.io/badge/written%20in-nix-666DF2?style=for-the-badge&logo=nixos&labelColor=24273a">
     </a>
     <a href="https://github.com/nix-community/home-manager">
       <img src="https://img.shields.io/badge/managed%20by-home%20manager-666DF2?style=for-the-badge&logo=nixos&labelColor=24273a">
