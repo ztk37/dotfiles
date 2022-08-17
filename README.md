@@ -1,3 +1,5 @@
+<!-- > `Disclaimer`: This repository is for my personal use. Expect unexpected changes in the future. -->
+
 <h1 align="center">
   <div><img src="./assets/nix-logo.svg" width="100px" /></div>
   <div>My .dotfiles hosted on GitHub</div>
@@ -24,9 +26,9 @@
   My dotfiles managed with <a href="https://nixos.org/learn.html">nix</a> and <a href="https://github.com/nix-community/home-manager">home-manager</a>.
 <p> -->
 
-## Installation
+## Prerequisites
 
-```console
+```sh
 # install nix package manager
 sh <(curl -L https://nixos.org/nix/install)
 
@@ -40,10 +42,11 @@ nix-shell '<home-manager>' -A install
 home-manager --version
 ```
 
-## Usage
+## Installation
 
-Verify and apply config
+> Clone this repository and move it's content to `.config/nixpkgs`. Then run the commend underneath.
 
-```console
+```sh
+# verify and apply config
 home-manager switch
 ```
