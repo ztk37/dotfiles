@@ -1,6 +1,20 @@
-# `dotfiles`
+<h1 align="center">
+  <div>
+    <img
+      src="./assets/nix-logo.svg"
+      width="100px"
+      alt="nix logo"
+    />
+  </div>
+  <div>My dotfiles</div>
+  <div>
+    <img src="./assets/underline.png" width="380px" />
+  </div>
+</h1>
 
-> My dotfiles managed with [nix](https://nixos.org/learn.html) and [home-manager](https://github.com/nix-community/home-manager).
+<p align="center">
+  My dotfiles managed with <a href="https://nixos.org/learn.html">nix</a> and <a href="https://github.com/nix-community/home-manager">home-manager</a>.
+<p>
 
 ## Installation
 
