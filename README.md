@@ -44,7 +44,7 @@ home-manager --version
 
 ## Installation
 
-> Clone this repository and move it's content to `.config/nixpkgs`. Then run the commend underneath.
+> Clone this repository and move it's content to `.config/nixpkgs`. Then run the commend below.
 
 ```sh
 # verify and apply config
