@@ -3,27 +3,48 @@
 { pkgs, ... }: {
   # imports = [ ./modules/common.nix ];
 
+  # FIXME: Probably needs nix-darwin
+  # system.defaults = {
+  #   dock = {
+  #     tilesize = 14;
+  #   };
+  # };
+
+  # virtualisation.docker.enable = true;
+
   home = {
     username = "cedric";
     homeDirectory = "/Users/cedric";
     stateVersion = "22.05";
 
     packages = [
-      # Development
+      # Command line utilities
       pkgs.git
       pkgs.hub
-      pkgs.vscode
+      pkgs.cloc
+      pkgs.httpstat
+      pkgs.jq
+
+      # Installing and managing Docker/Docker Desktop is currently easier manually
+      # pkgs.docker
+      # pkgs.docker-machine # Docker Desktop
 
       # Nodejs
       pkgs.nodejs
+      pkgs.yarn
 
       # Nix
       pkgs.niv
       pkgs.nixfmt
-      pkgs.lorri
+      # pkgs.lorri
 
       # Haskell
       pkgs.hlint
+      pkgs.ormolu
+      pkgs.hpack
+      pkgs.cabal-install
+      pkgs.stack
+      pkgs.ghc
       # pkgs.ghcup
       pkgs.ghcid
 
@@ -38,17 +59,9 @@
       # pkgs.rust-make
 
       # Python
+
       # Go
       pkgs.go
-      #Swift
-
-      # Misc
-      pkgs.jq
-
-      # Why not?
-      # pkgs.prolog
-      # pkgs.lisp
-      # pkgs.agda
     ];
   };
 
@@ -103,6 +116,10 @@
         enable = true;
         caseSensitive = false;
         prompt = { theme = "pure"; };
+
+        extraConfig = ''
+          setopt extended_glob;
+        '';
       };
     };
 
@@ -110,11 +127,12 @@
       enable = true;
 
       extraConfig = ''
-        set number;
+        set number
         set noswapfile
       '';
     };
 
+    # FIXME: VSCode is not inside app folder
     vscode = {
       enable = true;
       package = pkgs.vscode;
