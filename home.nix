@@ -24,6 +24,7 @@
       pkgs.cloc
       pkgs.httpstat
       pkgs.jq
+      pkgs.direnv
 
       # Installing and managing Docker/Docker Desktop is currently easier manually
       # pkgs.docker
@@ -77,7 +78,7 @@
 
       extraConfig = { init = { defaultBranch = "main"; }; };
 
-      ignores = [ ".DS_Store" ];
+      ignores = [ ".DS_Store" ".direnv/" ];
     };
 
     zsh = {
@@ -146,5 +147,12 @@
     # };
 
     jq.enable = true;
+
+    direnv = {
+      enable = true;
+      enableZshIntegration = true;
+
+      nix-direnv.enable = true;
+    };
   };
 }
