@@ -48,5 +48,5 @@ home-manager --version
 
 ```sh
 # verify and apply config
-home-manager switch
+home-manager switch --flake .
 ```
